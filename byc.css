@@ -1,0 +1,98 @@
+/*设置通配符消除浏览器的默认margin和padding*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*设置a标签样式*/
+a{
+    text-decoration: none;
+    color: white;
+}
+/*这里面主要是设置背景的宽高,设置class属性为bg的样式*/
+html,body,.bg {
+    height: 100%;
+    width: 100%;
+}
+/*给每一个背景图片设置图片路径,并让他不平铺,而且居中自适应显示*/
+.bg:nth-child(1) {
+    background: url("D:/wang zhan/网站/照片/1.jpg") no-repeat center/cover;
+}
+.bg:nth-child(2) {
+    background: url("D:/wang zhan/网站/照片/2.jpg") no-repeat center/cover;
+}
+.bg:nth-child(3) {
+    background: url("D:/wang zhan/网站/照片/3.jpg") no-repeat center/cover;
+}
+.bg:nth-child(4) {
+    background: url("D:/wang zhan/网站/照片/4.jpg") no-repeat center/cover;
+}
+.bg:nth-child(5) {
+    background: url("D:/wang zhan/网站/照片/5.jpg") no-repeat center/cover;
+}
+/*首先将所有背景图片隐藏*/
+.bg {
+    display: none;
+}
+/*设置一个激活样式,当背景图片含有这个class属性的时候就会激活背景图片,以达到切换的效果*/
+.bg-active {
+    display: block;
+    opacity: .8;
+}
+/*这里是设置中间导航栏的位置,这里是特殊的设置水平垂直居中的方式,只有在页面元素为100%的时候才能够这样设置*/
+.main {
+    position: absolute;
+    width: 1100px;
+    height: 400px;
+    /*background: pink;*/
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+/*取消ul的小圆点*/
+.main ul {
+    list-style: none;
+}
+/*让他们浮动起来,设置固定宽高,并且加一个CSS3过渡效果的样式*/
+.main ul li {
+    float: left;
+    width: 100px;
+    height: 400px;
+    transition: all 1s;
+}
+/*设置一个li的激活样式,当他激活的时候,宽度加宽,高度不变,背景图片变化*/
+.main ul li.li-active {
+    width: 700px;
+    height: 400px;
+    background: #666666;
+}
+/*设置li标签里面的背景图片,这里面的背景图片需要和上面的全局背景图片对应上*/
+.main ul li:nth-child(1) {
+    background: url("D:/wang zhan/网站/照片/1.jpg") no-repeat center/cover;
+}
+.main ul li:nth-child(2) {
+    background: url("D:/wang zhan/网站/照片/2.jpg") no-repeat center/cover;
+}
+.main ul li:nth-child(3) {
+    background: url("D:/wang zhan/网站/照片/3.jpg") no-repeat center/cover;
+}
+.main ul li:nth-child(4) {
+    background: url("D:/wang zhan/网站/照片/4.jpg") no-repeat center/cover;
+}
+.main ul li:nth-child(5) {
+    background: url("D:/wang zhan/网站/照片/5.jpg") no-repeat center/cover;
+}
+/*设置li里面的div的宽高,这个是一个背景的效果,设置透明度*/
+.main ul li div {
+    height: 400px;
+    width: 100px;
+    background: black;
+    opacity: .5;
+}
+/*设置div里面的p标签,让他居中显示,并且让他竖着显示出来*/
+.main ul li div p{
+    color: white;
+    width: 14px;
+    padding: 100px 40px;
+}
